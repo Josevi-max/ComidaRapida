@@ -1,0 +1,82 @@
+#opcionesPedido img {
+    opacity: 0.2;
+    height: 35rem;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    width: 90%;
+    padding-left: 5%;
+}
+
+#botones {
+    margin-left: 38%;
+}
+
+#imgInicia {
+    display: block;
+    margin: auto;
+}
+
+#zonaProductos,
+#listadoProductos,
+#zonaTicket {
+    display: none;
+}
+
+#Comidas,
+#Bebidas {
+    display: none;
+}
+
+#Comidas img,
+#Bebidas img {
+    padding: 10px;
+    height: 100px;
+    width: 200px;
+}
+
+input {
+    width: 40px;
+}
+
+#Bebidas img {
+    border: solid blue 1px;
+}
+
+#Comidas img {
+    border: solid red 1px;
+}
+
+.bebida_llevar {
+    color: aqua;
+}
+
+.comida_llevar {
+    color: orange;
+}
+
+.producto_local {
+    color: white;
+}
+
+#papel {
+    height: auto;
+}
+
+h2,
+h3,
+#zonaTicket p {
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}

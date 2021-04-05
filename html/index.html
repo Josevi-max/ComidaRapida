@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos max-burguer</title>
+    <!--Css boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--JS boostraps-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!--Jquery-->
+    <script src="../jquery/DescargaJquery/jquery-3.6.0.js"></script>
+    <!--Mi css-->
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+
+    <div class="card bg-dark text-white lead  col-12" id="opcionesPedido">
+        <img src="../imgs/fondoCabeza.jpg" class="card-img" alt="fondoCabeza">
+        <div class="card-img-overlay">
+            <h1 class="card-title text-center">Opciones pedido</h1>
+            <p class="card-text text-center">Bienvenidos a max burguer antes de realizar su pedido debera de hacer algunas configuraciones.</p>
+            <ul class="text-center">
+                <li>Seleccionar al trabajador que le va a atender</li>
+                <li>Indicar el tipo de pedido (recoger o llevar a domicilio)</li>
+                <li>Dele al más para comenzar a pedir su ordén, la x la cancelará y la V sera para confirmar su pedido</li>
+            </ul>
+            <p class=" text-center">Selecciona el trabajador</p>
+            <select id="trabajadores" class="  col-2 d-block mx-auto    ">
+                <option value="Nico">Nico</option>
+                <option value="Aarón">Aarón</option>
+                
+                <option value="Santiago">Santiago</option>
+                <option value="Juanje">Juanje</option>
+                
+                <option value="Paula">Paula</option>
+                <option value="Enrique">Enrique</option>
+            </select>
+            <div id="pedido" class="col-12  mt-3 text-center">
+                <label>Recoger</label>
+                <input type="radio" value="recoger" name="pedido" checked>
+
+                <label>A domicilio</label>
+                <input type="radio" value="domicilio" name="pedido">
+
+            </div>
+            <div id="botones" class="mt-4 col-6 row ">
+                <canvas id="mas" class="col-2">
+                    Si sale esto es por que no soporta tu navegador canvas
+                </canvas>
+                <canvas id="cruz" class="col-2">
+                    Si sale esto es por que no soporta tu navegador canvas
+                </canvas>
+                <canvas id="tick" class="col-2">
+                    Si sale esto es por que no soporta tu navegador canvas
+                </canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="row mb-5">
+
+        <div id="imgInicia" class="col-12 text-center">
+            <h1>Esperando Pedido</h1>
+            <img src="../imgs/imagenInicio.gif" alt="" class="d-block mx-auto w-50">
+        </div>
+
+        <div id="zonaProductos" class="col-lg-4 col-sm-6 ">
+
+            <img src="../imgs/familiaComida.png" alt="Comida" class="col-2 m-3 " id="comida">
+            <img src="../imgs/familiaBebidas.png" alt="Bebida" class="col-2 m-5" id="bebida">
+
+            <div id="Comidas">
+                <img src="../imgs/Pedido1.jpg " alt="pedido 1 " title="a1-hamburguesa-3€ " class="col-2">
+                <input type="number" min="1" max="10" id="a1" placeholder="1">
+                <img src="../imgs/Pedido2.jpg " alt=" pedido 2" title="a2-patatas-2€ " class="col-2">
+                <input type="number" min="1" max="10" id="a2" placeholder="1">
+
+                <img src="../imgs/Pedido3.jpg " alt="pedido 3 " title="a3-helado-2.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="a3" placeholder="1">
+
+                <img src="../imgs/Pedido4.jpg " alt="pedido 4 " title="a4-nuggets de pollo-2€ " class="col-2">
+                <input type="number" min="1" max="10" id="a4" placeholder="1">
+
+                <img src="../imgs/Pedido5.jpg " alt=" pedido 5" title="a5-Pizza-7€ " class="col-2">
+                <input type="number" min="1" max="10" id="a5" placeholder="1">
+
+                <img src="../imgs/Pedido6.jpg " alt="pedido 6 " title="a6-Spaguettis a la boloñesa-6.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="a6" placeholder="1">
+
+                <img src="../imgs/Pedido7.jpg " alt=" pedido 7" title="a7-Ensalada-3€ " class="col-2">
+                <input type="number" min="1" max="10" id="a7" placeholder="1">
+
+                <img src="../imgs/Pedido8.jpg " alt="pedido 8 " title="a8-Aguja-4.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="a8" placeholder="1">
+
+
+
+            </div>
+            <div id="Bebidas">
+                <img src="../imgs/Pedido9.jpg " alt="pedido 9 " title="b109-CocaCola-2€ " class="col-2">
+                <input type="number" min="1" max="10" id="b109" placeholder="1">
+                <img src="../imgs/Pedido10.jpg " alt=" pedido 10" title="b110-Fanta-1.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="b110" placeholder="1">
+                <img src="../imgs/Pedido11.png " alt="pedido 11 " title="b111-Nestea-1.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="b111" placeholder="1">
+                <img src="../imgs/Pedido12.png " alt="pedido 12 " title="b112-Monster-2€ " class="col-2">
+                <input type="number" min="1" max="10" id="b112" placeholder="1">
+                <img src="../imgs/Pedido13.jpg " alt=" pedido 13" title="b113-Aquarious-1.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="b113" placeholder="1">
+                <img src="../imgs/Pedido14.jpg " alt="pedido 14" title="b114-Cerveza-2.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="b114" placeholder="1">
+                <img src="../imgs/Pedido15.jpeg " alt=" pedido 15" title="b115-Agua-1€ " class="col-2">
+                <input type="number" min="1" max="10" id="b115" placeholder="1">
+                <img src="../imgs/Pedido16.jpg " alt="pedido 16 " title="b116-Zumo-1.5€ " class="col-2">
+                <input type="number" min="1" max="10" id="b116" placeholder="1">
+
+
+            </div>
+
+        </div>
+        <div id="listadoProductos" class="col-lg-4 col-sm-6  mt-5">
+            <table class="table table-dark table-hover col-12 ml-5 text-center">
+                <thead>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Unidades</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="zonaTicket" class="col-lg-4 col-sm-12  mt-5">
+            <div class="card bg-dark text-dark ">
+                <img src="../imgs/fondoPapel.jpg" id="papel" class="card-img" alt="fondoPapel">
+                <div class="card-img-overlay">
+                    <h2 class="card-title text-center">Ticket</h2>
+                    <!-- <p class="card-text"></p>-->
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center bg-dark text-light ">
+        <p>© Calle Alhambra, 11, 04720 El Campillo del Moro, Almería <br>Copyright 2021: Fernández morant josé vicente</p>
+
+    </footer>
+    <script src="../jquery/jquery.js "></script>
+</body>
+
+
+</html>
